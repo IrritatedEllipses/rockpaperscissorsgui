@@ -1,23 +1,59 @@
-.intro {
+:root {
+	--primary: #ddd;
+	--dark: #333;
+	--light: #fff;
+	--shadow: 0 1px 5px rbga(104, 104, 104, 0.8);
 
 }
 
-.rounds {
+html {
+	box-sizing: border-box;
+	font-family: helvetica, arial, sans-serif;
+	color: var(--dark);
+}
+
+body {
+	background: #ccc;
+	margin: 30px 50px;
+	line-height: 1.4;
+
 
 }
 
-.playerSelection {
+.container {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-areas: 
+	'welcome welcome'
+	'rps-choice scores'
+	'rps-choice scores'
+	'results results';
+}
+
+.welcome {
+	grid-area: welcome;
+	align-items: center;
+	text-align: center;
 
 }
 
-.displayResults {
-
+#btn {
+	grid-area: rps-choice;
+	background-color: var(--dark);
+	color: var(--light);
+	padding: 0.6rem 1.3rem;
+	text-decoration: none;
+	border: 0;
 }
 
-.displayScore {
-
+.scores	{
+	grid-area: scores;
+	font-size: 30px;
 }
 
-.options {
+.results {
+	grid-area: results;
+	font-size: 30px;
+	text-align: center;
 
 }
